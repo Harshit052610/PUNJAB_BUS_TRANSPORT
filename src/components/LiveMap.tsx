@@ -27,7 +27,7 @@ import {
 const buses = [
   {
     id: "bus123",
-    vehicleNumber: "AP07 XX 1234",
+    vehicleNumber: "PB07 XX 1234",
     driver: "Ravi Kumar",
     route: "Route A",
     passengers: 32,
@@ -40,7 +40,7 @@ const buses = [
   },
   {
     id: "bus456",
-    vehicleNumber: "AP07 XX 5678",
+    vehicleNumber: "PB07 XX 5678",
     driver: "Suresh Reddy", 
     route: "Route B",
     passengers: 28,
@@ -53,7 +53,7 @@ const buses = [
   },
   {
     id: "bus789",
-    vehicleNumber: "AP07 XX 9012",
+    vehicleNumber: "PB07 XX 9012",
     driver: "Lakshmi Prasad",
     route: "Route C", 
     passengers: 15,

@@ -1,7 +1,7 @@
-import { 
-  Users, 
-  Bus, 
-  DollarSign, 
+import {
+  Users,
+  Bus,
+  DollarSign,
   Activity,
   TrendingUp,
   MapPin,
@@ -11,6 +11,12 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // Mock data - replace with real data from Firestore
 const metrics = {
@@ -26,7 +32,7 @@ const recentActivity = [
   {
     id: 1,
     type: "passenger_update",
-    bus: "AP07 XX 1234",
+    bus: "PB07 XX 1234",
     driver: "Ravi Kumar",
     message: "Bus capacity reached: 38/40 passengers",
     time: "2 min ago",
@@ -35,7 +41,7 @@ const recentActivity = [
   {
     id: 2,
     type: "route_complete",
-    bus: "AP07 XX 5678", 
+    bus: "PB07 XX 5678",
     driver: "Suresh Reddy",
     message: "Route completed successfully",
     time: "5 min ago",
@@ -44,7 +50,7 @@ const recentActivity = [
   {
     id: 3,
     type: "alert",
-    bus: "AP07 XX 9012",
+    bus: "PB07 XX 9012",
     driver: "Lakshmi Prasad",
     message: "Driver reported door issue",
     time: "8 min ago",
@@ -53,7 +59,7 @@ const recentActivity = [
   {
     id: 4,
     type: "driver_online",
-    bus: "AP07 XX 3456",
+    bus: "PB07 XX 3456",
     driver: "Venkat Rao",
     message: "Driver came online",
     time: "12 min ago",
@@ -64,7 +70,7 @@ const recentActivity = [
 const onlineBuses = [
   {
     id: "bus123",
-    vehicleNumber: "AP07 XX 1234",
+    vehicleNumber: "PB07 XX 1234",
     driver: "Ravi Kumar",
     route: "Route A",
     passengers: 32,
@@ -74,25 +80,25 @@ const onlineBuses = [
     estimatedRevenue: 1600
   },
   {
-    id: "bus456", 
-    vehicleNumber: "AP07 XX 5678",
+    id: "bus456",
+    vehicleNumber: "PB07 XX 5678",
     driver: "Suresh Reddy",
     route: "Route B",
     passengers: 28,
     capacity: 40,
-    status: "enroute", 
+    status: "enroute",
     location: "Main Bus Stand",
     estimatedRevenue: 1400
   },
   {
     id: "bus789",
-    vehicleNumber: "AP07 XX 9012", 
+    vehicleNumber: "PB07 XX 9012",
     driver: "Lakshmi Prasad",
     route: "Route C",
     passengers: 15,
     capacity: 35,
     status: "idle",
-    location: "Terminal 2", 
+    location: "Terminal 2",
     estimatedRevenue: 750
   }
 ];
@@ -100,6 +106,33 @@ const onlineBuses = [
 export default function Dashboard() {
   return (
     <div className="space-y-6">
+      {/* Swipable Box */}
+      <Card className="w-[945px] h-[302px] overflow-hidden">
+        <Swiper
+          modules={[Pagination, Navigation, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          className="mySwiper h-full w-full"
+        >
+          <SwiperSlide>
+            <img src="/2img.png" alt="Image 1" className="object-cover w-full h-full" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/1img.png" alt="Image 2" className="object-cover w-full h-full" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/3img.png" alt="Image 3" className="object-cover w-full h-full" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/0img.png" alt="Image 4" className="object-cover w-full h-full" />
+          </SwiperSlide>
+        </Swiper>
+      </Card>
+
       {/* Page Header */}
       <div className="flex items-center justify-between">
         <div>

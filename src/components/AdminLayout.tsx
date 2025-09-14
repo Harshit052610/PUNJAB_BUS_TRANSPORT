@@ -66,10 +66,10 @@ export default function AdminLayout() {
           </Button>
           
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center">
-              <Bus className="h-5 w-5 text-primary-foreground" />
+            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center overflow-hidden">
+              <img src="/govt1.jpg" alt="Government Logo" className="h-full w-full object-cover" />
             </div>
-            <h1 className="text-xl font-semibold text-foreground">BusLive Admin</h1>
+            <h1 className="text-xl font-semibold text-foreground">Director State Transport<br/>Government of Punjab, India</h1>
           </div>
         </div>
 
@@ -120,8 +120,8 @@ export default function AdminLayout() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-2">
-                <div className="w-7 h-7 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-medium">A</span>
+                <div className="w-7 h-7 bg-primary rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="/lion.jpg" alt="Lion Logo" className="h-full w-full object-cover" />
                 </div>
                 <span className="hidden sm:inline">Admin</span>
               </Button>

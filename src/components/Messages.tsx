@@ -37,7 +37,7 @@ const conversations = [
     participant: {
       name: "Ravi Kumar",
       phone: "+91 98765 43210",
-      bus: "AP07 XX 1234",
+      bus: "PB07 XX 1234",
       route: "Route A"
     },
     lastMessage: "Passenger count updated: 32",
@@ -51,7 +51,7 @@ const conversations = [
     participant: {
       name: "Suresh Reddy",
       phone: "+91 87654 32109", 
-      bus: "AP07 XX 5678",
+      bus: "PB07 XX 5678",
       route: "Route B"
     },
     lastMessage: "Route completed successfully",
@@ -65,7 +65,7 @@ const conversations = [
     participant: {
       name: "Lakshmi Prasad",
       phone: "+91 76543 21098",
-      bus: "AP07 XX 9012", 
+      bus: "PB07 XX 9012", 
       route: "Route C"
     },
     lastMessage: "Alert: Door issue reported",
