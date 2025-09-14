@@ -10,6 +10,7 @@ import {
   MessageSquare,
   AlertTriangle
 } from "lucide-react";
+import MapComponent from "./MapComponent";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -211,27 +212,11 @@ export default function LiveMap() {
             </CardHeader>
             <CardContent className="h-[calc(100%-80px)]">
               {/* Placeholder for actual map integration */}
-              <div className="w-full h-full bg-surface-variant rounded-lg border-2 border-dashed border-border flex flex-col items-center justify-center space-y-4">
-                <MapIcon className="h-16 w-16 text-muted-foreground" />
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Interactive Map</h3>
-                  <p className="text-muted-foreground max-w-md text-sm">
-                    This area will display the live map with real-time bus locations. 
-                    Integration with Mapbox or Google Maps will show bus icons, routes, and live tracking.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {buses.map((bus) => (
-                    <div key={bus.id} className="flex items-center gap-1 px-2 py-1 bg-card rounded-full border">
-                      <div className={`w-2 h-2 rounded-full ${
-                        bus.status === 'enroute' ? 'bg-success' : 
-                        bus.status === 'idle' ? 'bg-warning' : 'bg-destructive'
-                      }`}></div>
-                      <span className="text-xs font-medium text-foreground">{bus.vehicleNumber}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <MapComponent 
+                buses={filteredBuses}
+                selectedBus={selectedBus}
+                onBusSelect={setSelectedBus}
+              />
             </CardContent>
           </Card>
         </div>

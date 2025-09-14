@@ -8,6 +8,12 @@ import Dashboard from "./components/Dashboard";
 import DriverManagement from "./components/DriverManagement";
 import LiveMap from "./components/LiveMap";
 import Messages from "./components/Messages";
+import BusManagement from "./components/BusManagement";
+import RouteManagement from "./components/RouteManagement";
+import Analytics from "./components/Analytics";
+import AlertTemplates from "./components/AlertTemplates";
+import Settings from "./components/Settings";
+import AuditLogs from "./components/AuditLogs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,12 +30,12 @@ const App = () => (
             <Route path="drivers" element={<DriverManagement />} />
             <Route path="map" element={<LiveMap />} />
             <Route path="messages" element={<Messages />} />
-            <Route path="buses" element={<div className="p-8 text-center text-muted-foreground">Bus Management - Coming Soon</div>} />
-            <Route path="routes" element={<div className="p-8 text-center text-muted-foreground">Route Management - Coming Soon</div>} />
-            <Route path="analytics" element={<div className="p-8 text-center text-muted-foreground">Analytics Dashboard - Coming Soon</div>} />
-            <Route path="alerts" element={<div className="p-8 text-center text-muted-foreground">Alert Templates - Coming Soon</div>} />
-            <Route path="settings" element={<div className="p-8 text-center text-muted-foreground">Settings - Coming Soon</div>} />
-            <Route path="logs" element={<div className="p-8 text-center text-muted-foreground">Audit Logs - Coming Soon</div>} />
+            <Route path="buses" element={<BusManagement />} />
+            <Route path="routes" element={<RouteManagement />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="alerts" element={<AlertTemplates />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="logs" element={<AuditLogs />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
