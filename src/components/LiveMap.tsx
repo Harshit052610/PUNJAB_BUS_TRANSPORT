@@ -204,10 +204,12 @@ export default function LiveMap() {
                   <Navigation className="h-4 w-4" />
                   Center Map
                 </Button>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Maximize className="h-4 w-4" />
-                  Fullscreen
-                </Button>
+                <a href="https://live-map-punjab.netlify.app" target="_blank" rel="noopener noreferrer">
+  <Button variant="outline" size="sm" className="gap-2">
+    <Maximize className="h-4 w-4" />
+    Fullscreen
+  </Button>
+</a>
               </div>
             </CardHeader>
             <CardContent className="h-[calc(100%-80px)]">
